@@ -1,6 +1,6 @@
 # Smart Lighting System
 
-![Tests](https://github.com/aungkhantmaw64/smart-lighting-system/actions/workflows/workflow.yml/badge.svg)
+![Tests](https://github.com/aungkhantmaw64/smart-lighting-system/actions/workflows/pio-workflow.yml/badge.svg)
 
 ## Flow Chart
 
