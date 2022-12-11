@@ -19,10 +19,8 @@ private:
 public:
     LightControllerSpy(int pinNumber);
     ~LightControllerSpy();
-    virtual void init(void) override;
     virtual void turnOn(void) override;
     virtual void turnOff(void) override;
-    virtual void deinit(void) override;
 
     /*Functions for spying*/
     LightState getLastLightState(void);

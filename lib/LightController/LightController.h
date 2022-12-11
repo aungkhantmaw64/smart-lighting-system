@@ -5,10 +5,8 @@ class LightController
 {
 public:
     virtual ~LightController();
-    virtual void init(void);
     virtual void turnOn(void);
     virtual void turnOff(void);
-    virtual void deinit(void);
 };
 
 #endif

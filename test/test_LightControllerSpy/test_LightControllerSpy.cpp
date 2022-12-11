@@ -3,33 +3,33 @@
 
 #define DEFAULT_LIGHT_PIN 5
 
-static LightControllerSpy lightController{DEFAULT_LIGHT_PIN};
-
 class LightControllerSpyTest : public ::testing ::Test
 {
 protected:
     virtual void SetUp(void) override
     {
-        lightController.init();
     }
     virtual void TearDown(void) override
     {
-        lightController.deinit();
     }
 };
 
 TEST_F(LightControllerSpyTest, LightState_UnknownAfterInitialization)
 {
+    LightControllerSpy lightController{DEFAULT_LIGHT_PIN};
     EXPECT_EQ(LIGHTSTATE_UNKNOWN, lightController.getLastLightState());
 }
 
 TEST_F(LightControllerSpyTest, LightState_On)
 {
+    LightControllerSpy lightController{DEFAULT_LIGHT_PIN};
     lightController.turnOn();
     EXPECT_EQ(LIGHTSTATE_ON, lightController.getLastLightState());
 }
 
-TEST_F(LightControllerSpyTest, LightState_Off){
+TEST_F(LightControllerSpyTest, LightState_Off)
+{
+    LightControllerSpy lightController{DEFAULT_LIGHT_PIN};
     lightController.turnOff();
     EXPECT_EQ(LIGHTSTATE_OFF, lightController.getLastLightState());
 }

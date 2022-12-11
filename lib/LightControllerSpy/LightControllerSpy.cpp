@@ -2,15 +2,11 @@
 
 LightControllerSpy::LightControllerSpy(int pinNumber)
 {
+    state = LIGHTSTATE_UNKNOWN;
 }
 
 LightControllerSpy::~LightControllerSpy()
 {
-}
-
-void LightControllerSpy::init(void)
-{
-    state = LIGHTSTATE_UNKNOWN;
 }
 
 void LightControllerSpy::turnOn(void)
@@ -21,11 +17,6 @@ void LightControllerSpy::turnOn(void)
 void LightControllerSpy::turnOff(void)
 {
     state = LIGHTSTATE_OFF;
-}
-
-void LightControllerSpy::deinit(void)
-{
-    state = LIGHTSTATE_UNKNOWN;
 }
 
 LightState LightControllerSpy::getLastLightState(void)
